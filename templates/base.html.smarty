@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="{block name=htmlbody}some-body-tag{/block}">
+<head>
+    <title>Some title</title>
+
+    <style>
+        a {
+            background-color: red;
+        }
+
+        table {
+            color: orange;
+        }
+    </style>
+
+    <script>
+      const foo = function () {
+        global = 'foo';
+      };
+    </script>
+
+    {block name="header"}{/block}
+</head>
+<body>
+{block content}
+    <h1>Overall Title</h1>
+{/block}
+</body>
+</html>
