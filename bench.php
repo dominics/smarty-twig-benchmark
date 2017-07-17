@@ -38,7 +38,7 @@ function setup($type)
     switch ($type) {
         case 'smarty':
             $smarty = new Smarty();
-            $smarty->escape_html = true;
+            $smarty->escape_html = false;
             $smarty->compile_check = false;
             $smarty->setCacheDir(__DIR__ . '/cache');
             $smarty->setCompileDir(__DIR__ . '/cache');
@@ -49,6 +49,7 @@ function setup($type)
             return new Twig_Environment($loader, [
                 'cache' => __DIR__ . '/cache',
                 'auto_reload' => false,
+                'autoescape' => false,
             ]);
 
         case 'twig_reuse':
@@ -57,6 +58,7 @@ function setup($type)
             $env = new Twig_Environment($loader, [
                 'cache' => __DIR__ . '/cache',
                 'auto_reload' => false,
+                'autoescape' => false,
             ]);
 
             return $env->load('index.html.twig');
