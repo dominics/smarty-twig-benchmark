@@ -1,0 +1,16 @@
+{
+    "name": "dominics/smartybench",
+    "description": "Benchmark of Smarty versus Twig",
+    "type": "project",
+    "require": {
+        "smarty/smarty": "~3.1",
+        "twig/twig": "^2.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dominic Scheirlinck",
+            "email": "dominic@varspool.com"
+        }
+    ]
+}
